@@ -1,16 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ted Fleuriscat</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ted Fleuriscat</title>
 
-        <link rel="stylesheet" href="./styles-contents/style.css">
-    </head>
+    <link rel="stylesheet" href="./styles-contents/style.css" />
+  </head>
 
-    <body>
-        <h1>Hello Ted's Portfolio </h1>
-        
-        <script src="./scripts-contents/main.js"></script>
-    </body>
+  <body>
+    <header>
+      <!-- Main Navigation -->
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="logo">Ted Fleuriscat</a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Button -->
+      <button
+        class="hanburger"
+        id="hamburger"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Overlay -->
+      <div id="overlay"></div>
+
+      <!-- Side Nav -->
+      <aside class="sidebar-nav" id="sidebar-nav">
+        <header class="sidebar-header">
+          <span>Menu</span>
+        </header>
+
+        <nav class="sidebar-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </aside>
+    </header>
+
+    <script src="./scripts-contents/main.js"></script>
+  </body>
 </html>
