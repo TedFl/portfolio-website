@@ -1,3 +1,21 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #0C2151;
+  --color-secondary: #333333;
+
+  /* Background Colors */
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+
+  /* Text Colors */
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555;
+
+  /* Action Colors */
+  --color-button-primary: #111111;
+  --color-button-primary-hover: #333333;
+}
+
 /* CSS Reset - It removes default spacing*/
 
 * {
@@ -13,21 +31,114 @@ body {
 }
 
 .hero {
-  /* 1. Size */
+  /* 1. Purpose: Primary landing sectiob of the website.
+    Introducing Ted and comunicates the main value proposition.
+ */
+
+  /* 2. Size */
   min-height: 100vh;
 
-  /* 2. Position / Layout */
+  /* 3. Position / Layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  /* 3. Spacing */
+  /* 4. Spacing */
   padding: 2rem;
 
-  /* 4. Appearance */
-  background-color: #ffffff;
+  /* 5. Appearance */
+  background-color: var(--color-background);
 
-  /* 5. Typography */
+  /* 6. Typography */
   text-align: center;
+
+  /* 7. Behavior: Nothing yet */
+}
+
+.hero-name {
+  /* 1. Purpose: Main headline of the website | Primary element visitors should remember */
+
+  /* 2. Size */
+  font-size: 4rem;
+
+  /* 3. Position / Layout: Inherited from .hero Flexbox container */
+
+  /* 4. Spacing */
+  margin-bottom: 1.5rem;
+
+  /* 5. Appearance */
+  color: var(--color-text-primary);
+
+  /* 6. Typography */
+  font-weight: 800;
+  line-height: 1.1;
+
+  /* 7. Behavior:  Nothing yet*/
+}
+
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: 2.8rem;
+  }
+}
+
+.hero-description {
+  /* 1. Purpose: Explain what Ted does and why it matters */
+
+  /* 2. Size */
+  max-width: 700px;
+
+  /* 3. Position / Layout: Inherited from .hero */
+
+  /* 4. Spacing */
+  margin-bottom: 2rem;
+
+  /* 5. Appearance: Nothing yet */
+
+  /* 6. Typography */
+  font-size: 1.2rem;
+  line-height: 1.8;
+
+  /* 7. Behavior: Nothing yet */
+}
+
+.hero-intro {
+  /* 1. Purpose: Introduce the main heading */
+
+  /* 2. Size */
+  font-size: 1.25rem;
+
+  /* 3. Position / Layout: Inherited from .hero */
+
+  /* 4. Spacing */
+  margin-bottom: 0.75rem;
+
+  /* 5. Appearance */
+  color: var(--color-text-secondary);
+
+  /* 6. Typography */
+  font-weight: 400;
+
+  /* 7. Behavior: Nothing yet */
+}
+
+.hero-title {
+  /* 1. Purpose: Professional identity */
+
+  /* 2. Size */
+  font-size: 2rem;
+
+  /* 3. Position / Layout: Inherited from .hero */
+
+  /* 4. Spacing */
+  margin-bottom: 1.5rem;
+
+  /* 5. Appereance */
+  color: var(--color-text-secondary);
+
+  /* 6. Typography */
+  font-weight: 600;
+
+  /* 7. Behavior: Nothing yet */
 }
