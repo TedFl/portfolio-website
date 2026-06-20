@@ -11,3 +11,23 @@ body {
   background-color: #ffffff;
   color: #222;
 }
+
+.hero {
+  /* 1. Size */
+  min-height: 100vh;
+
+  /* 2. Position / Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* 3. Spacing */
+  padding: 2rem;
+
+  /* 4. Appearance */
+  background-color: #ffffff;
+
+  /* 5. Typography */
+  text-align: center;
+}
