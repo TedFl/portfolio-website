@@ -1,64 +1,20 @@
-:root {
-  /* Primary Colors */
-  --color-primary: #0c2151;
-  --color-secondary: #333333;
+/* 0. ==== HERO SECTION MAP ====
 
-  /* Background Colors */
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
+HTML Structure
 
-  /* Text Colors */
-  --color-text-primary: #111111;
-  --color-text-secondary: #555555;
-
-  /* Action Colors */
-
-  /* Button Background Colors */
-  --color-button-primary-bg: #0071e3;
-  --color-button-primary-bg-hover: #005bb5;
-
-  --color-button-secondary-bg: #ffffff;
-  --color-button-secondary-bg-hover: var(--color-button-primary-bg-hover);
-
-  /* Buttons Text Colors */
-  --color-button-primary-txt: #ffffff;
-  --color-button-primary-txt-hover: #ffffff;
-
-  --color-button-secondary-txt: var(--color-button-primary-bg);
-  --color-button-secondary-txt-hover: #ffffff;
-
-  /* Button Border Colors */
-  --color-button-border: #046edd;
-  --color-button-border-hover: #ffffff;
-}
-
-* {
-  /* CSS Reset - It removes default spacing*/
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  /* 1. Purpose: Global typography for the website */
-  /* 2. Size: Inherited */
-  /* 3. Position / Layout: N/A */
-  /* 4. Spacing: N/A */
-
-  /* 5. Appearance */
-  background-color: var(--color-background);
-  color: var(--color-text-primary);
-
-  /* 6. Typography */
-  font-family: "Inter", sans-serif;
-
-  /* 7. Behavior: N/A */
-}
+.hero
+└── .hero-content
+    ├── .hero-intro
+    ├── .hero-name
+    ├── .hero-title
+    ├── .hero-description
+    └── .hero-buttons
+        ├──.btn-primary
+        └──.btn-secondary 
+============================*/
 
 .hero {
-  /* 1. Purpose: Primary landing section of the website.
-    Introducing Ted and comunicates the main value proposition.
- */
+  /* 1. Purpose: Primary landing section of the website. | Introduces Ted and comunicates his main value proposition. */
 
   /* 2. Size */
   min-height: 100vh;
@@ -73,7 +29,7 @@ body {
   padding: 2rem;
 
   /* 5. Appearance */
-  background-color: var(--color-background);
+  background-color: var(--color-hero-bg);
 
   /* 6. Typography */
   text-align: center;
@@ -96,7 +52,7 @@ body {
   color: var(--color-text-primary);
 
   /* 6. Typography */
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
 
   /* 7. Behavior:  Nothing yet*/
@@ -206,11 +162,11 @@ body {
 
   /* 5. Appearance */
   border-radius: 999px;
-  border: 2px solid var(--color-button-border);
+  border: 1.25px solid var(--color-button-border);
 
   /* 6. Typography */
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   text-decoration: none;
 
   /* 7. Behavior */
