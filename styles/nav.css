@@ -1,18 +1,56 @@
 /* 0. ==== NAVIGATION SECTION MAP ====
 
-.main-nav
+header
+└──.main-nav
     ├──.logo
     └──.nav-links
         └── a
 
-.hamburger
-#overlay
-.sidebar-nav
-    ├── .sidebar-header
-    └── .sidebar-links
-        └── a
+    .hamburger
+    #overlay
+    .sidebar-nav
+        ├── .sidebar-header
+        └── .sidebar-links
+            └── a
 
 ===================================== */
+
+header {
+  /* 1. Purpose: Sticky wrapper that keeps the navigation visible while users scroll the page. */
+
+  /* 2. Size */
+  width: 100%;
+
+  /* 3. Position / Layout */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* 4. Spacing: Nothing yet */
+
+  /* 5. Appearance */
+  background-color: var(--color-background);
+
+  /* 6. Typography: Inherited */
+
+  /* 7. Behavior */
+  transition:
+    background-color 0.3s ease,
+    background-filter 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  /* 1. Purpose: Applied when the user scolls down the page to create premium glass effect. */
+
+  /* 5. Appearance */
+  background-color: rgb(255, 255, 255, 0.8);
+
+  backdrop-filter: blur(16px);
+  --webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 4px 20px rgb(0, 0, 0.06);
+}
 
 .main-nav {
   /* 1. Purpose: Primary desktop navigation for the website. */
@@ -112,4 +150,11 @@
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: var(--color-secondary);
+}
+
+.hamburger,
+#overlay,
+.sidebar-nav {
+  /* Hide Mobile Navigation*/
+  display: none;
 }

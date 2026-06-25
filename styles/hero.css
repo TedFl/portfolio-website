@@ -186,12 +186,12 @@
   /* 7. Behavior */
   background-color: var(--color-button-primary-bg-hover);
   color: var(--color-button-primary-txt-hover);
-  border-color: var(--color-button-border-hover);
+  border: 2px solid var(--color-button-border-hover);
 }
 
 .btn-secondary:hover {
   /* 7. Behavior */
   background-color: var(--color-button-secondary-bg-hover);
   color: var(--color-button-secondary-txt-hover);
-  border-color: var(--color-button-border-hover);
+  border: 2px solid var(--color-button-border-hover);
 }
