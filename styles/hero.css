@@ -1,9 +1,6 @@
 /* 0. ==== HERO SECTION MAP ====
 
-HTML Structure
-
 .hero
-└── .hero-content
     ├── .hero-intro
     ├── .hero-name
     ├── .hero-title
@@ -11,7 +8,7 @@ HTML Structure
     └── .hero-buttons
         ├──.btn-primary
         └──.btn-secondary 
-============================*/
+================================ */
 
 .hero {
   /* 1. Purpose: Primary landing section of the website. | Introduces Ted and comunicates his main value proposition. */

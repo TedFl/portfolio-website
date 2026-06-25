@@ -1,0 +1,115 @@
+/* 0. ==== NAVIGATION SECTION MAP ====
+
+.main-nav
+    ├──.logo
+    └──.nav-links
+        └── a
+
+.hamburger
+#overlay
+.sidebar-nav
+    ├── .sidebar-header
+    └── .sidebar-links
+        └── a
+
+===================================== */
+
+.main-nav {
+  /* 1. Purpose: Primary desktop navigation for the website. */
+
+  /* 2. Size */
+  width: 100%;
+  height: 64px;
+
+  /* 3. Position / Layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* 4. Spacing */
+  padding: 0 4rem;
+
+  /* 5. Appearance */
+  background-color: var(--color-background);
+
+  /* 6. Typography */
+  font-family: "Inter", sans-serif;
+
+  /* 7. Behavior: Nothing yet */
+}
+
+.logo {
+  /* 1. Purpose: Brand link that returns users to the homepage */
+
+  /* 2. Size: Content-based */
+
+  /* 3. Position / Layout */
+  display: inline-block;
+
+  /* 4. Spacing: Nothing yet */
+
+  /* 5. Appearance */
+  color: var(--color-text-primary);
+
+  /* 6. Typography */
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  /* 7. Behavior */
+  transition: color 0.25s ease;
+}
+
+.nav-links {
+  /* 1. Purpose: Groups the primary navigation links. */
+
+  /* 2. Size: Content-based */
+
+  /* 3. Position / Layout */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  /* 4. Spacing */
+  list-style: none;
+
+  /* 5. Appearance: Nothing yet */
+  /* 6. Typography: Inherited from .main-nav */
+  /* 7. Behavior: Nothing yet*/
+}
+
+.nav-links a {
+  /* 1. Purpose: Links users to major websiye sections. */
+
+  /* 2. Size: Content-based */
+
+  /* 3. Position / Layout */
+  display: inline-block;
+
+  /* 4. Spacing: Nothing yet */
+
+  /* 5. Appearance */
+  color: var(--color-text-secondary);
+
+  /* 6. Typography */
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  /* 7. Behavior */
+  transition: color 0.25s ease;
+}
+
+.logo:hover,
+.nav-links a:hover {
+  /* 7. Behavior */
+  color: var(--color-primary);
+}
+
+.nav-links a:hover {
+  /* 7. Behavior */
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--color-secondary);
+}
