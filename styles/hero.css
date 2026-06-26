@@ -147,7 +147,7 @@
   /* 1. Purpose: Style hero links as clickable call-to-action buttons */
 
   /* 2. Size */
-  min-width: 145px;
+  min-width: 120px;
 
   /* 3. Position / Layout */
   display: inline-flex;
@@ -162,7 +162,7 @@
   border: 1.25px solid var(--color-button-border);
 
   /* 6. Typography */
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 200;
   text-decoration: none;
 
