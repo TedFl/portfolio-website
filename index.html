@@ -27,45 +27,32 @@
 
   <body>
     <header>
-      <!-- Main Navigation -->
       <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <a href="#home" class="logo">Ted Fleuriscat</a>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
 
-      <!-- Hamburger Button -->
-      <button
-        class="hamburger"
-        id="hamburger"
-        aria-label="Open navigation menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <!-- Hamburger Button -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
 
       <!-- Overlay -->
       <div id="overlay"></div>
-
-      <!-- Side Nav -->
-      <aside class="sidebar-nav" id="sidebar-nav">
-        <header class="sidebar-header">
-          <span>Menu</span>
-        </header>
-
-        <nav class="sidebar-links">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </aside>
     </header>
 
     <main>

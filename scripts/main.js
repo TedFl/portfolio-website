@@ -2,7 +2,7 @@
 
 /* 1. Purpose: Adds the "Scrolled" class to the header when the user scrolls down the page. */
 
-const header = document.querySelector("header");
+const header = document.querySelector(".main-nav");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 10) {

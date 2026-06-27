@@ -52,7 +52,7 @@
   font-weight: 700;
   line-height: 1.1;
 
-  /* 7. Behavior:  Nothing yet*/
+  /* 7. Behavior: Nothing yet*/
 }
 
 @media (max-width: 600px) {
@@ -186,7 +186,7 @@
   /* 7. Behavior */
   background-color: var(--color-button-primary-bg-hover);
   color: var(--color-button-primary-txt-hover);
-  border: 2px solid var(--color-button-border-hover);
+  border: 1px solid var(--color-button-border-hover);
 }
 
 .btn-secondary:hover {
