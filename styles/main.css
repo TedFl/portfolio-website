@@ -1,6 +1,41 @@
 /* Root Variables */
 
 :root {
+  /* ---------------------------------- Navigation --------------------------- */
+
+  /* Background*/
+  --color-nav-bg: #ffffff;
+
+  /* Logo */
+  --color-nav-logo-txt: #111111;
+  --color-nav-logo-txt-hover: #333333;
+
+  /* Links */
+
+  /* Desktop links */
+  --color-nav-links-txt: #555555;
+  --color-nav-links-txt-hover: #111111;
+
+  /* Mobile links*/
+  --color-nav-Mlinks-txt: #ffffff;
+  --color-nav-Mlinks-txt-hover: #bfb9b9;
+
+  /* Hamburger*/
+  --color-nav-hamburgerBtn-bg-hover: #f5f5f7;
+  --color-nav-hamburgerBtn-bar-bg: #111111;
+
+  /* Scrolled*/
+  --color-nav-logo-txt-scrolled: #ffffff;
+  --color-nav-logo-txt-scrolled-hover: #bfb9b9;
+
+  --color-nav-links-txt-scrolled: #bfb9b9;
+  --color-nav-links-txt-scrolled-hover: #ffffff;
+
+  --color-nav-hamburgerBtn-bg-scrolled-hover: #f5f5f724;
+  --color-nav-hamburgerBtn-bar-bg-scrolled: #ffffff;
+
+  /*-------------------------------------------------------------------------*/
+
   /* Primary Colors */
   --color-primary: #0c2151;
   --color-secondary: #333333;
