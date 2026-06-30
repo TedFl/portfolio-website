@@ -13,23 +13,23 @@
 .hero {
   /* 1. Purpose: Primary landing section of the website. | Introduces Ted and comunicates his main value proposition. */
 
-  /* 2. Size */
-  min-height: 100vh;
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  /* 3. Size */
+  min-height: 100vh;
+
   /* 4. Spacing */
   padding: 2rem;
 
-  /* 5. Appearance */
-  background-color: var(--color-hero-bg);
-
-  /* 6. Typography */
+  /* 5. Typography */
   text-align: center;
+
+  /* 6. Appearance */
+  background-color: var(--color-hero-bg);
 
   /* 7. Behavior: Nothing yet */
 }
@@ -37,20 +37,20 @@
 .hero-name {
   /* 1. Purpose: Main headline of the website | Primary element visitors should remember */
 
-  /* 2. Size */
-  font-size: 4rem;
+  /* 2. Position / Layout: Inherited from .hero Flexbox container */
 
-  /* 3. Position / Layout: Inherited from .hero Flexbox container */
+  /* 3. Size */
+  font-size: 4rem;
 
   /* 4. Spacing */
   margin-bottom: 1.5rem;
 
-  /* 5. Appearance */
-  color: var(--color-text-primary);
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-weight: 700;
   line-height: 1.1;
+
+  /* 6. Appearance */
+  color: var(--color-text-primary);
 
   /* 7. Behavior: Nothing yet*/
 }
@@ -63,60 +63,56 @@
 
 .hero-description {
   /* 1. Purpose: Explain what Ted does and why it matters */
+  /* 2. Position / Layout: Inherited from .hero */
 
-  /* 2. Size */
+  /* 3. Size */
   max-width: 650px;
-
-  /* 3. Position / Layout: Inherited from .hero */
 
   /* 4. Spacing */
   margin-bottom: 2rem;
 
-  /* 5. Appearance: Nothing yet */
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-size: 1.2rem;
   line-height: 1.8;
 
+  /* 6. Appearance: Nothing yet */
   /* 7. Behavior: Nothing yet */
 }
 
 .hero-intro {
   /* 1. Purpose: Introduce the main heading */
+  /* 2. Position / Layout: Inherited from .hero */
 
-  /* 2. Size */
+  /* 3. Size */
   font-size: 1.25rem;
-
-  /* 3. Position / Layout: Inherited from .hero */
 
   /* 4. Spacing */
   margin-bottom: 0.75rem;
 
-  /* 5. Appearance */
-  color: var(--color-text-secondary);
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-weight: 400;
+
+  /* 6. Appearance */
+  color: var(--color-text-secondary);
 
   /* 7. Behavior: Nothing yet */
 }
 
 .hero-title {
   /* 1. Purpose: Professional identity */
+  /* 2. Position / Layout: Inherited from .hero */
 
-  /* 2. Size */
+  /* 3. Size */
   font-size: 2rem;
-
-  /* 3. Position / Layout: Inherited from .hero */
 
   /* 4. Spacing */
   margin-bottom: 1.5rem;
 
-  /* 5. Appereance */
-  color: var(--color-text-secondary);
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-weight: 500;
+
+  /* 6. Appereance */
+  color: var(--color-text-secondary);
 
   /* 7. Behavior: Nothing yet */
 }
@@ -124,21 +120,19 @@
 .hero-buttons {
   /* 1. Purpose: Container for the primary and secondary call-to-action links. */
 
-  /* 2. Size: Content-based */
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
 
+  /* 3. Size: Content-based */
+
   /* 4. Spacing */
   margin-top: 2rem;
 
-  /* 5. Appearance: Nothing yet */
-
-  /* 6. Typography: Inherited from .hero */
-
+  /* 5. Typography: Inherited from .hero */
+  /* 6. Appearance: Nothing yet */
   /* 7. Behavior: Nothing yet */
 }
 
@@ -146,38 +140,38 @@
 .btn-secondary {
   /* 1. Purpose: Style hero links as clickable call-to-action buttons */
 
-  /* 2. Size */
-  min-width: 120px;
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: inline-flex;
   justify-content: center;
   align-items: center;
 
+  /* 3. Size */
+  min-width: 120px;
+
   /* 4. Spacing */
   padding: 0.75rem;
 
-  /* 5. Appearance */
-  border-radius: 999px;
-  border: 1.25px solid var(--color-button-border);
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-size: 0.85rem;
   font-weight: 200;
   text-decoration: none;
+
+  /* 6. Appearance */
+  border-radius: 999px;
+  border: 1.25px solid var(--color-button-border);
 
   /* 7. Behavior */
   transition: all 300ms ease;
 }
 
 .btn-primary {
-  /* 5. Appearance */
+  /* 6. Appearance */
   background-color: var(--color-button-primary-bg);
   color: var(--color-button-primary-txt);
 }
 
 .btn-secondary {
-  /* 5. Appearance */
+  /* 6. Appearance */
   background-color: var(--color-button-secondary-bg);
   color: var(--color-button-secondary-txt);
 }

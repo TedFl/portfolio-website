@@ -10,13 +10,13 @@
   --color-nav-logo-txt: #111111;
   --color-nav-logo-txt-hover: #333333;
 
-  /* Links */
+  /* Nav Links */
 
-  /* Desktop links */
+  /* Desktop  */
   --color-nav-links-txt: #555555;
   --color-nav-links-txt-hover: #111111;
 
-  /* Mobile links*/
+  /* Mobile */
   --color-nav-Mlinks-txt: #ffffff;
   --color-nav-Mlinks-txt-hover: #bfb9b9;
 
@@ -81,8 +81,8 @@
 
 body {
   /* 1. Purpose: Global typography for the website */
-  /* 2. Size: Inherited */
-  /* 3. Position / Layout: N/A */
+  /* 2. Position / Layout: N/A */
+  /* 3. Size: Inherited */
   /* 4. Spacing: N/A */
 
   /* 5. Appearance */

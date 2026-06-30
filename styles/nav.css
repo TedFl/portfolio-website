@@ -10,10 +10,7 @@ header
 header {
   /* 1. Purpose: Sticky wrapper that keeps the navigation visible while users scroll the page. */
 
-  /* 2. Size */
-  width: 100%;
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,32 +19,30 @@ header {
   top: 0;
   z-index: 1000;
 
-  /* 4. Spacing: Nothing yet */
-  /* 5. Appearance */
-  /* 6. Typography: Inherited */
-  /* 7. Behavior: Nothong yet */
+  /* 3. Size */
+  width: 100%;
 }
 
 .main-nav {
   /* 1. Purpose: Primary desktop navigation for the website. */
 
-  /* 2. Size */
-  width: 100%;
-  height: 48px;
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  /* 3. Size */
+  width: 100%;
+  height: 48px;
+
   /* 4. Spacing */
   padding: 0 8rem;
 
-  /* 5. Appearance */
-  background-color: var(--color-nav-bg);
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-family: "Inter", sans-serif;
+
+  /* 6. Appearance */
+  background-color: var(--color-nav-bg);
 
   /* 7. Behavior */
   transition:
@@ -59,20 +54,16 @@ header {
 .logo {
   /* 1. Purpose: Brand link that returns users to the homepage */
 
-  /* 2. Size: Content-based */
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: inline-block;
 
-  /* 4. Spacing: Nothing yet */
-
-  /* 5. Appearance */
-  color: var(--color-nav-logo-txt);
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
+
+  /* 6. Appearance */
+  color: var(--color-nav-logo-txt);
 
   /* 7. Behavior */
   transition: color 0.25s ease;
@@ -86,38 +77,30 @@ header {
 .nav-links {
   /* 1. Purpose: Groups the primary navigation links. */
 
-  /* 2. Size: Content-based */
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: flex;
   align-items: center;
   gap: 2rem;
 
+  /* 3. Size: Content-based */
+
   /* 4. Spacing */
   list-style: none;
-
-  /* 5. Appearance: Nothing yet */
-  /* 6. Typography: Inherited from .main-nav */
-  /* 7. Behavior: Nothing yet*/
 }
 
 .nav-links a {
   /* 1. Purpose: Links users to major websiye sections. */
 
-  /* 2. Size: Content-based */
-
-  /* 3. Position / Layout */
+  /* 2. Position / Layout */
   display: inline-block;
 
-  /* 4. Spacing: Nothing yet */
-
-  /* 5. Appearance */
-  color: var(--color-nav-links-txt);
-
-  /* 6. Typography */
+  /* 5. Typography */
   font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;
+
+  /* 6. Appearance */
+  color: var(--color-nav-links-txt);
 
   /* 7. Behavior */
   transition:
@@ -128,7 +111,6 @@ header {
 .nav-links a:hover {
   /* 7. Behavior */
   color: var(--color-nav-links-txt-hover);
-  font-weight: 600;
 }
 
 .hamburger,
@@ -140,7 +122,7 @@ header {
 .main-nav.scrolled {
   /* 1. Purpose: Applied when the user scolls down the page to create premium glass effect. */
 
-  /* 5. Appearance */
+  /* 6. Appearance */
   background-color: rgba(29, 29, 31, 0.8);
 
   backdrop-filter: blur(20px);
@@ -150,7 +132,7 @@ header {
 }
 
 .main-nav.scrolled .logo {
-  /* 5. Appearance */
+  /* 6. Appearance */
   color: var(--color-nav-logo-txt-scrolled);
 }
 .main-nav.scrolled .logo:hover {
@@ -159,7 +141,7 @@ header {
 }
 
 .main-nav.scrolled .nav-links a {
-  /* 5. Appearance */
+  /* 6. Appearance */
   color: var(--color-nav-links-txt-scrolled);
 }
 .main-nav.scrolled .nav-links a:hover {
@@ -185,19 +167,122 @@ header
     displaying a hamburger menu that will later control the mobile navigation drawer. */
 
   .main-nav {
-    /* 3. Position Layout */
+    /* 2. Position Layout */
     justify-content: space-between;
 
     /* 4. Spacing */
     padding: 0 1.5rem;
   }
 
+  /* ---------------------------------- Hamburger Button - START -----------------------------------------*/
+
   .hamburger {
-    /* 3. Position Layout */
+    /* 1. Purpose: Displays the mobile navigation toggle on smaller screens. */
+
+    /* 2. Position / Layout */
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    /* 3. Size */
+    width: 44px;
+    height: 44px;
+
+    /* 4. Spacing */
+    padding: 0;
+
+    /* 6. Appearance */
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    /* 7. Behavior */
+    transition:
+      background-color 0.8s ease,
+      opacity 0.3s ease;
   }
+
+  .hamburger:hover {
+    /* 7. Behavior */
+    background-color: var(--color-nav-hamburgerBtn-bg-hover);
+  }
+
+  .main-nav.scrolled .hamburger:hover {
+    /* 7. Behavior */
+    background-color: var(--color-nav-hamburgerBtn-bg-scrolled-hover);
+  }
+
+  .bar {
+    /* 1 Purpose: Individual line that forms the hamburger icon. */
+
+    /* 2. Position / Layout */
+    display: block;
+
+    /* 3. Size */
+    width: 24px;
+    height: 2px;
+
+    /* 6. Appearance */
+    background-color: var(--color-nav-hamburgerBtn-bar-bg);
+    border-radius: 999px;
+
+    /* 7. Behavior */
+    transition:
+      transform 0.3s ease-in-out,
+      opacity 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  .main-nav.scrolled .bar {
+    /* 6. Appearance: Hamburger line when scrolling on mobile */
+    background-color: var(--color-nav-hamburgerBtn-bar-bg-scrolled);
+  }
+
+  /* ==== HAMBURGER ANIMATION SECTION MAP ==== 
+
+    .hamburger
+    │
+    ├──.bar:nth-child(1) -> top bar rotates down
+    ├──.bar:nth-child(2) -> middle bar disappears
+    └──.bar:nth-child(3) -> bottom bar rotates up
+
+    ===============================================*/
+
+  .hamburger.active .bar:nth-child(1) {
+    /* 1. Purpose: Turns the top hamburger line into the first half of the X - rotates & shift down */
+
+    /* 2. Position / layout */
+    transform: translateY(7px) rotate(45deg);
+
+    /* 7. Behavior: Triggered when .hamburger has the active class */
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    /* 1. Purpose: Hides the middle hamburger line when menu is active */
+    /* 6. Appearance Inherited from .bar */
+    opacity: 0;
+
+    /* 7. Behavior: Triggered when .hamburger has the active class */
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    /* 1. Purpose: Turns the bottom hamburger line into the Second half of the X - rotates & shifts up */
+
+    /* 2. Position / layout */
+    transform: translateY(-7px) rotate(-45deg);
+
+    /* 7. Behavior: Triggered when .hamburger has the active class */
+  }
+
+  /* -------------------------------------- Hamburger Button - END --------------------------------------*/
+
+  /* ---------------------------------------- Nav Links - START ------------------------------------------- */
+
   .nav-links {
-    /* 3. Position / Layout */
+    /* 2. Position / Layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -207,14 +292,14 @@ header
     top: 48px;
     right: -100%;
 
-    /* 2. Size: add the size after Position / Layout so element remain visible while styling */
+    /* 3. Size */
     width: 100%;
     height: calc(100vh - 48px);
 
     /* 4. Spacing */
     padding: 2rem;
 
-    /* 5. Appearance */
+    /* 6. Appearance */
     background-color: rgb(22, 22, 23);
 
     backdrop-filter: blur(20px);
@@ -222,38 +307,37 @@ header
 
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12);
 
-    /* 6. Typography: Inherited */
-
     /* 7. Behavior */
     transition:
       right 0.6s ease-in-out,
       transform 0.35s ease-in-out,
-      opacity 035s ease-in-out;
+      opacity 0.35s ease-in-out;
   }
 
   .nav-links.active {
     right: 0;
   }
 
-  /* ------------------ Link Animations ------------- */
+  /* --------------------------------------- Links Animations - START--------------------------------------------------- */
 
   .nav-links li {
-    /* 3. Position / layout */
+    /* 2. Position / layout */
     transform: translateY(12px);
 
-    /* 5. Appearance*/
+    /* 6. Appearance*/
     opacity: 0;
 
     /* 7. Behavior */
-    transition: opacity 0.35s ease;
-    transform: 0.35s ease;
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease;
   }
 
   .nav-links.active li {
-    /* 3. Position / layout */
+    /* 2. Position / layout */
     transform: translateY(0);
 
-    /* 5. Appearance*/
+    /* 6. Appearance*/
     opacity: 1;
   }
 
@@ -271,26 +355,24 @@ header
     transition-delay: 0.26s;
   }
 
-  /* ------------------------------------------------ */
+  /* ----------------------------------------------- Links Animations - END -----------------------------------------------------*/
 
   .nav-links a {
     /* 1. Purpose: Links users to major websiye sections. */
 
-    /* 2. Size: Content-based */
-
-    /* 3. Position / Layout */
+    /* 2. Position / Layout */
     display: inline-block;
 
     /* 4. Spacing: Nothing yet */
     padding: 6px;
 
-    /* 5. Appearance */
-    color: var(--color-nav-Mlinks-txt);
-
-    /* 6. Typography */
+    /* 5. Typography */
     font-size: 1.25rem;
     font-weight: 500;
     text-decoration: none;
+
+    /* 6. Appearance */
+    color: var(--color-nav-Mlinks-txt);
 
     /* 7. Behavior */
     transition:
@@ -298,118 +380,10 @@ header
       opacity 0.3s ease;
   }
 
-  /* 7. Behavior */
   .nav-links a:hover {
-    /* 5. Appearance */
+    /* 7. Behavior */
     color: var(--color-nav-Mlinks-txt-hover);
+    transform: translateX(4px);
   }
-
-  .hamburger {
-    /* 1. Purpose: Displays the mobile navigation toggle on smaller screens. */
-
-    /* 2. Size */
-    width: 44px;
-    height: 44px;
-
-    /* 3. Position / Layout */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-
-    /* 4. Spacing */
-    padding: 0;
-
-    /* 5. Appearance */
-    background: transparent;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-
-    /* 6. Typography: Not Applicable */
-    /* 7. Behavior */
-    transition: opacity 0.3s ease;
-  }
-
-  /* 7. Behavior */
-  .hamburger:hover {
-    /* 5. Appearance */
-    background-color: var(--color-nav-hamburgerBtn-bg-hover);
-
-    /* 7. Behavior */
-    transition: background-color 0.8s ease;
-  }
-  .main-nav.scrolled .hamburger:hover {
-    /* 5. Appearance */
-    background-color: var(--color-nav-hamburgerBtn-bg-scrolled-hover);
-
-    /* 7. Behavior */
-    transition: background-color 0.8s ease;
-  }
-
-  .bar {
-    /* 1 Purpose: Individual line that forms the hamburger icon. */
-
-    /* 2. Size */
-    width: 24px;
-    height: 2px;
-
-    /* 3. Position / Layout */
-    display: block;
-
-    /* 4. Spacing: Controlled by gap */
-
-    /* 5. Appearance */
-    background-color: var(--color-nav-hamburgerBtn-bar-bg);
-    border-radius: 999px;
-
-    /* 6. Typography: Not applicable */
-
-    /* 7. Behavior */
-    transition:
-      transform 0.3s ease-in-out,
-      opacity 0.3s ease,
-      background-color 0.3s ease;
-  }
-  .main-nav.scrolled .bar {
-    /* 5. Appearance: Hamburger line when scrolling on mobile */
-    background-color: var(--color-nav-hamburgerBtn-bar-bg-scrolled);
-  }
-
-  }
-
-  /* ==== HAMBURGER ANIMATION SECTION MAP ==== 
-
-    .hamburger
-    │
-    ├──.bar:nth-child(1) -> top bar rotates down
-    ├──.bar:nth-child(2) -> middle bar disappears
-    └──.bar:nth-child(3) -> bottom bar rotates up
-
-    ===============================================*/
-
-  .hamburger.active .bar:nth-child(1) {
-    /* 1. Purpose: Turns the top hamburger line into the first half of the X - rotates & shift down */
-    /* 3. Position / layout */
-    transform: translateY(7px) rotate(45deg);
-
-    /* 7. Behavior: Triggered when .hamburger has the active class */
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    /* 1. Purpose: Hides the middle hamburger line when menu is active */
-    /* 5. Appearance Inherited from .bar */
-    opacity: 0;
-
-    /* 7. Behavior: Triggered when .hamburger has the active class */
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    /* 1. Purpose: Turns the bottom hamburger line into the Second half of the X - rotates & shifts up */
-    /* 3. Position / layout */
-    transform: translateY(-7px) rotate(-45deg);
-
-    /* 7. Behavior: Triggered when .hamburger has the active class */
-  }
+  /* ------------------------------------------------ Nav Links - END ---------------------------------------------------- */
 }
