@@ -111,6 +111,9 @@ header {
 .nav-links a:hover {
   /* 7. Behavior */
   color: var(--color-nav-links-txt-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+  text-decoration-color: var(--color-nav-links-txt-hover);
 }
 
 .hamburger,
@@ -147,6 +150,9 @@ header {
 .main-nav.scrolled .nav-links a:hover {
   /* 7. Behavior */
   color: var(--color-nav-links-txt-scrolled-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+  text-decoration-color: var(--color-nav-links-txt-scrolled-hover);
 }
 
 /* 0. ==== MOBILE NAVIGATION MAP ====
@@ -384,6 +390,9 @@ header
     /* 7. Behavior */
     color: var(--color-nav-Mlinks-txt-hover);
     transform: translateX(4px);
+    text-decoration: underline;
+    text-underline-offset: 0.75rem;
+    text-decoration-color: var(--color-nav-Mlinks-txt-hover);
   }
   /* ------------------------------------------------ Nav Links - END ---------------------------------------------------- */
 }

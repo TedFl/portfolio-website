@@ -17,8 +17,8 @@
   --color-nav-links-txt-hover: #111111;
 
   /* Mobile */
-  --color-nav-Mlinks-txt: #ffffff;
-  --color-nav-Mlinks-txt-hover: #bfb9b9;
+  --color-nav-Mlinks-txt: #bfb9b9;
+  --color-nav-Mlinks-txt-hover: #ffffff;
 
   /* Hamburger*/
   --color-nav-hamburgerBtn-bg-hover: #f5f5f7;
@@ -93,4 +93,9 @@ body {
   font-family: "Inter", sans-serif;
 
   /* 7. Behavior: N/A */
+}
+
+/* Body scroll lock when Hamburger menu is open */
+body.no-scroll {
+  overflow: hidden;
 }

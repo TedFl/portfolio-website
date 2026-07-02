@@ -14,16 +14,37 @@ window.addEventListener("scroll", () => {
 
 /* ==== MOBILE NAVIGATION TOGGLE ==== */
 
-/* 1. Purpose: Toggles the mobile navigation state when the hamburger button is clicked. */
+/* 1. Purpose: Controls the mobile navigation state. */
 
 const hamburger = document.querySelector("#hamburger");
 const navLinks = document.querySelector("#nav-links");
+const body = document.body;
+
+const openMobileMenu = () => {
+  hamburger.classList.add("active");
+  navLinks.classList.add("active");
+  body.classList.add("no-scroll");
+};
+
+const closeMobileMenu = () => {
+  hamburger.classList.remove("active");
+  navLinks.classList.remove("active");
+  body.classList.remove("no-scroll");
+  hamburger.setAttribute("aria-expanded", "false");
+};
 
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-
-  /* this is mainly for accessibility, so screen readers know whether the menu is open or closed. */
   const isOpen = hamburger.classList.contains("active");
-  hamburger.setAttribute("aria-expanded", isOpen);
+
+  if (isOpen) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMobileMenu();
+  }
 });
