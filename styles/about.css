@@ -1,0 +1,13 @@
+/* 0. ===== ABOUT SECTION MAP ==== 
+
+.about
+└──.about-container
+    ├──.about-image
+    ├──.about-content
+        ├──.section-tag
+        ├──.section-title
+        ├──.section-description
+            └──.about-stats
+                └──.about-stat
+
+======================================= */
