@@ -89,7 +89,7 @@
 
   /* 5. Typography */
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
 
   /* 6. Appearance */
   color: var(--color-text-secondary);
@@ -139,3 +139,55 @@
   /* 7. Behavior: Nothing yet */
 }
 
+.about-stats {
+  /* 1. Purpose: Groups the About section skills pillars. */
+
+  /* 2. Position / Layout */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* 3. Size */
+  width: 100%;
+
+  /* 4. Spacing */
+  gap: 1rem;
+  margin-top: 2rem;
+
+  /* 5. Typography: Inherited */
+  /* 6. Appearance: Nothing yet */
+  /* 7. Behavior: Nothing yet */
+}
+
+.about-stat {
+  /* 1. Purpose: Individual skill pillar card. */
+
+  /* 2. Position / Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  /* 3. Size */
+  min-height: 120px;
+
+  /* 4. Spacing */
+  padding: 1.75rem;
+
+  /* 5. Typography */
+  line-height: 1.4;
+
+  /* 6. Appearance */
+  background-color: var(--color-surface);
+  border-radius: 1.25rem;
+
+  /* 7. Behavior */
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-stat:hover {
+  /* 7. Behavior */
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
