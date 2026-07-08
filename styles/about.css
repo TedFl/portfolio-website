@@ -172,14 +172,14 @@
   /* 4. Spacing */
   padding: 1.75rem;
 
-  /* 5. Typography */
+  /* 5. Typography: Give the text line breathing room */
   line-height: 1.4;
 
   /* 6. Appearance */
   background-color: var(--color-surface);
   border-radius: 1.25rem;
 
-  /* 7. Behavior */
+  /* 7. Behavior: Animate Smoothly */
   transition:
     transform 0.3s ease,
     background-color 0.3s ease,
@@ -187,7 +187,32 @@
 }
 
 .about-stat:hover {
-  /* 7. Behavior */
+  /* 7. Behavior: Hover lift */
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    /* 2. Position / Layout */
+    grid-template-columns: 1fr;
+
+    /* 4. Spacing */
+    gap: 3rem;
+  }
+
+  .about-content {
+    /* 2. Position / Layout */
+    order: 1;
+  }
+  .about-image {
+    /* 2. Position / Layout */
+    order: 2;
+  }
+
+  .about-stats {
+    /* 2. Position / Layout */
+    order: 3;
+    grid-template-columns: 1fr;
+  }
 }
