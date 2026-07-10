@@ -7,8 +7,8 @@
         ├──.section-tag
         ├──.section-title
         ├──.section-description
-            └──.about-stats
-                └──.about-stat
+    └──.about-stats
+        └──.about-stat
 
 ======================================= */
 
@@ -40,14 +40,15 @@
   /* 2. Position / Layout */
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
+  align-items: start;
 
   /* 3. Size */
   width: 100%;
   max-width: 1200px;
 
   /* 4. Spacing */
-  gap: 5rem;
+  column-gap: 5rem;
+  row-gap: 1.5rem;
 
   /* 5. Typography: Inherited */
   /* 6. Apperance: Nothing yet */
@@ -58,6 +59,9 @@
   /* 1. Purpose: Placeholder area for future About section image. */
 
   /* 2. Position / Layout */
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: stretch;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,6 +69,7 @@
   /* 3. Size */
   width: 100%;
   min-height: 420px;
+  height: 100%;
 
   /* 4. Spacing: Nothing yet */
   /* 5. Typography: Nothing yet */
@@ -74,6 +79,12 @@
   border-radius: 2rem;
 
   /* 7. Behavior: Nothing yet */
+}
+
+.about-content {
+  /* 2. Position / Layout */
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .section-tag {
@@ -126,7 +137,7 @@
   max-width: 650px;
 
   /* 4. Spacing */
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 
   /* 5. Typography */
   font-size: 1.1rem;
@@ -143,6 +154,8 @@
   /* 1. Purpose: Groups the About section skills pillars. */
 
   /* 2. Position / Layout */
+  grid-column: 2;
+  grid-row: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -151,7 +164,6 @@
 
   /* 4. Spacing */
   gap: 1rem;
-  margin-top: 2rem;
 
   /* 5. Typography: Inherited */
   /* 6. Appearance: Nothing yet */
@@ -193,26 +205,69 @@
 }
 
 @media (max-width: 900px) {
-  .about-container {
+  .about {
+    /* 1. Purpose: Adjusts the About section for smaller screens. */
+
     /* 2. Position / Layout */
-    grid-template-columns: 1fr;
+    align-items: flex-start;
+
+    /* 3. Size */
+    min-height: auto;
 
     /* 4. Spacing */
-    gap: 3rem;
+    padding: 6rem 1.5rem;
+
+    /* 5. Typography: Inherited */
+    /* 6. Appearance: Inherited */
+    /* 7. Behavior: Nothing yet */
+  }
+  .about-container {
+    /* 1. Purpose: Stacks the About section elements into one mobile column. */
+
+    /* 2. Position / Layout */
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+
+    /* 3. Size */
+    width: 100%;
+
+    /* 4. Spacing */
+    column-gap: 0;
+    row-gap: 2rem;
+
+    /* 5. Typography: Inherited */
+    /* 6. Appearance: Inherited */
+    /* 7. Behavior: Nothing yet */
   }
 
   .about-content {
     /* 2. Position / Layout */
+    grid-column: 1;
+    grid-row: auto;
     order: 1;
-  }
-  .about-image {
-    /* 2. Position / Layout */
-    order: 2;
   }
 
   .about-stats {
     /* 2. Position / Layout */
-    order: 3;
+    grid-column: 1;
+    grid-row: auto;
     grid-template-columns: 1fr;
+    order: 2;
+
+    /* 3. Spacing */
+    gap: 1.5rem;
+  }
+
+  .about-image {
+    /* 2. Position / Layout */
+    grid-column: 1;
+    grid-row: auto;
+    order: 3;
+    align-self: auto;
+
+    /* 3. Size */
+    width: 100%;
+    min-height: 420px;
+    height: auto;
   }
 }
