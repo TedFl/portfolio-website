@@ -4,9 +4,9 @@
 └──.about-container
     ├──.about-image
     ├──.about-content
-        ├──.section-tag
-        ├──.section-title
-        ├──.section-description
+        ├──.about-tag
+        ├──.about-title
+        ├──.about-description
     └──.about-stats
         └──.about-stat
 
@@ -215,7 +215,7 @@
     min-height: auto;
 
     /* 4. Spacing */
-    padding: 6rem 1.5rem;
+    padding: 5rem 1.5rem;
 
     /* 5. Typography: Inherited */
     /* 6. Appearance: Inherited */
@@ -225,11 +225,12 @@
     /* 1. Purpose: Stacks the About section elements into one mobile column. */
 
     /* 2. Position / Layout */
-    grid-template-columns: 1fr;
-    align-items: flex-start;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
 
     /* 3. Size */
     width: 100%;
+    min-width: 0;
 
     /* 4. Spacing */
     column-gap: 0;
@@ -240,22 +241,44 @@
     /* 7. Behavior: Nothing yet */
   }
 
+  .about-content,
+  .about-stats,
+  .about-stat {
+    min-width: 0;
+  }
+
   .about-content {
     /* 2. Position / Layout */
     grid-column: 1;
     grid-row: auto;
     order: 1;
+
+    /* 3. Size */
+    min-width: 0;
   }
 
   .about-stats {
     /* 2. Position / Layout */
     grid-column: 1;
     grid-row: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     order: 2;
 
-    /* 3. Spacing */
+    /* 3. Size */
+    min-width: 0;
+
+    /* 4. Spacing */
     gap: 1.5rem;
+  }
+
+  .about-stat {
+    /* 3. Size */
+    width: 100%;
+    min-width: 0;
+    min-height: 160px;
+
+    /* 4. Spacing */
+    padding: 1.75rem;
   }
 
   .about-image {
@@ -267,7 +290,35 @@
 
     /* 3. Size */
     width: 100%;
-    min-height: 420px;
+    min-width: 0;
+    min-height: 0;
     height: auto;
+    aspect-ratio: 4/5;
   }
+}
+
+@media(max-width: 480px) {
+    .about {
+        /* 4. Spacing*/
+        padding: 4rem 1rem;
+    }
+
+    .section-title {
+        /* 5. Typography */
+        font-size: clamp(2.25rem, 11vw, 3rem);
+    }
+
+    .about-description {
+        /* 5. Typography */
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .about-stat {
+        /* 3. Size */
+        min-height: 140px;
+
+        /* 4. Spacing */
+        padding: 1.5rem;
+    }
 }

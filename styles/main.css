@@ -71,6 +71,12 @@
 }
 
 /* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 * {
   /* CSS Reset - It removes default spacing*/
